@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar-container">
+    <a href="javascript:void(0)" class="logo" (click)="scrollToSection('hero')">DC</a>
+
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" (click)="scrollToSection('sobre')">Sobre</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('projetos')">Projetos</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('contato')">Contato</a></li>
+    </ul>
+
+    <a href="javascript:void(0)" (click)="scrollToSection('contato')" class="btn btn-primary nav-cta">Fale Comigo</a>
+
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Menu">
+      <span class="hamburger" [class.open]="mobileMenuOpen"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" [class.active]="mobileMenuOpen">
+  <ul class="mobile-nav-links">
+    <li><a href="javascript:void(0)" (click)="scrollToSection('sobre')">Sobre</a></li>
+    <li><a href="javascript:void(0)" (click)="scrollToSection('projetos')">Projetos</a></li>
+    <li><a href="javascript:void(0)" (click)="scrollToSection('contato')">Contato</a></li>
+  </ul>
+</div>
